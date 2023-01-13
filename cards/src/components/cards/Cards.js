@@ -6,7 +6,7 @@ import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import DateRangeOutlinedIcon from '@mui/icons-material/DateRangeOutlined';
-import s from "./Cards.module.css"
+import s from "./Cards.module.scss"
 import EastIcon from '@mui/icons-material/East';
 import {Link} from 'react-router-dom'
 

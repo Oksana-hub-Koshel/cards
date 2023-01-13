@@ -1,5 +1,5 @@
 import React from 'react';
-import s from "./ResultLine.module.css"
+import s from "./ResultLine.module.scss"
 
 export const ResultLine = ({length}) => {
     return (

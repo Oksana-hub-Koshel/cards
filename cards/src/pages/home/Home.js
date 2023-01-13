@@ -1,5 +1,5 @@
 import React, {FC, useMemo, useState} from 'react';
-import   "./home.css";
+import  s from  "./home.module.scss";
 import {Cards} from "../../components/cards/Cards";
 import {Search} from "../../components/search/search";
 import {ResultLine} from "../../components/resultLine/ResultLine";
@@ -58,10 +58,10 @@ export const Home = () => {
 
 
     return (
-        <div className="container">
+        <div className={s.container}>
             <Search handleChange={handleChange} filter={filter}/>
             <ResultLine length={products.length}/>
-            <div className="cont_card">
+            <div className={s.cont_card}>
                 {products.map(product => {
                     console.log(product)
                     return( <Cards product={product} key={product.id} filter={filter} HighLight={HighLight} />)
