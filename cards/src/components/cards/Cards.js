@@ -29,7 +29,12 @@ export const Cards = ({product, filter, HighLight}) => {
                 {/*    className="card"*/}
                 {/*/>*/}
 
-                    <img src={product.image} className={s.image}/>
+                <div
+                    className={s.image}
+                    style={{ backgroundImage: `url(${product.image})` }}
+                ></div>
+
+                    {/*<img src={product.image} className={s.image}/>*/}
 
                 <CardContent>
                     <div style={{display:"flex", gap:5, color:"gray", marginBottom:5}}>

@@ -5,15 +5,30 @@ import {Search} from "../../components/search/search";
 import {ResultLine} from "../../components/resultLine/ResultLine";
 import useProducts from "../../hooks/useProducts";
 
+import { useCallback} from "react";
+import {addCards} from "../../store/CardsSlice";
+
+
 
 
 export const Home = () => {
     const [filter, setFilter]=useState('')
+    const {products,loading,error}=useProducts()
+
 
     const handleChange=(e)=>{
         setFilter(e.target.value)
     }
-    const {products,loading,error}=useProducts()
+
+
+
+    // const callbacks = {
+    //     addCards: useCallback(() => {
+    //         dispatch(
+    //             addCards([])
+    //         );
+    //     }, []),
+    // }
 
 
     const items=useMemo(()=>{
