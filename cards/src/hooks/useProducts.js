@@ -18,7 +18,6 @@ const useProducts = () => {
             dispatch({ type: addCards, payload:  response.data});
             setLoading(false)
         } catch (e) {
-
             setLoading(false)
             setError(error.message)
         }
@@ -29,7 +28,7 @@ const useProducts = () => {
         fetchProducts()
     }, [])
 
-    return {products, error,loading}
+    return {products, error,loading, dispatch}
 };
 
 export default useProducts;
